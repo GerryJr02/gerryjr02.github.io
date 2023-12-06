@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Task Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description"
+          content="Personal website for Computer Science student Gerardo Lopez Jr."/>
+    <title>Gerardo Lopez Jr</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
           rel="stylesheet">
@@ -11,69 +16,69 @@
 <body>
 
 <div id="navbar">
-    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        &#9776;
+    <a class="icon" onclick="toggleNavbar()">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
     </a>
-    <a id="brand" href="">Gerardo Lopez Jr</a>
+    <p id="brand" href="">Gerardo Lopez Jr</p>
     <a href="./" class="silent" style="color: black">HOME</a>
     <a href="./projects" class="silent">PROJECTS</a>
     <a href="./experience" class="silent">EXPERIENCE</a>
     <a href="./tech_skills" class="silent">TECHNICAL SKILLS</a>
     <a href="./" class="silent">CV</a>
 </div>
-<hr class="small-light-grey-line">
-<div id="content-border">
-    <div id="content-holder">
-        <div class="left-cont">
-            <img src="profile_pic.png" alt="Gerardo Selfie">
-            <p><strong>Gerardo Lopez Jr.</strong></p>
-            <p><em>Bachelors Mathematics</em></p>
-            <p><em>Minor in Computer Scicience</em></p>
-            <p><em>University of California, Irvine</em></p>
-            <p class="silent">gjlopez2@uci.edu</p>
 
-        </div>
-        <div class="right-cont">
-            <p>I am a Bachelor's student in Mathematics minoring in Computer Science at the
-                University of California, Irvine, with a strong interest in software engineering.
-                Currently, I work as a <strong>research assistant</strong> under Dr. Mark Warschauer
-                on the Code-AI project,
-                <strong>developing software to enhance AI literacy among students</strong>.
-                Additionally, I am part of the CP-LEADS fellowship, a program that prepares students
-                for Ph.D. programs while offering valuable research experience and tools.
-            </p>
-            <p>In my role as a research assistant, <strong>I lead the development of back-end
-                programs</strong> for a project hosted on AWS, collaborating with Ph.D. candidate
-                Daniel Ritchie. Together, our team focuses on creating innovative software to
-                provide students with new ways to learn programming and AI, offering me real-world
-                experience in collaborative coding.
-            </p>
-            <p>As a CP-LEADS fellow, I conduct research within a faculty member's lab, leading to
-                independent projects. The fellowship provides personalized mentorship and technical
-                skills, <strong>aligning with my goal of pursuing a Ph.D. after graduation.</strong>
-            </p>
-            <p>In my spare time, I enjoy developing websites, apps, games, and desktop
-                applications. Beyond coding, I find pleasure in video games, outdoor running, and
-                occasional streaming sessions with friends. These hobbies not only enrich my
-                personal life but also contribute to a well-rounded skill set that complements my
-                professional endeavors.
-            </p>
+<hr id="divide-top" class="small-light-grey-line">
+
+<main>
+    <div id="content-border">
+        <div id="content-holder">
+            <div class="left-cont">
+                <img id="selfie" src="./images/profile_pic.png" alt="Gerardo Selfie">
+                <p><strong>Gerardo Lopez Jr.</strong></p>
+                <p><em>Bachelors Mathematics</em></p>
+                <p><em>Minor in Computer Scicience</em></p>
+                <p><em>University of California, Irvine</em></p>
+                <p class="silent">gjlopez2@uci.edu</p>
+            </div>
+            <div class="right-cont">
+                <p>I am a Bachelor's student in Mathematics minoring in Computer Science at the
+                    University of California, Irvine, with a strong interest in software
+                    engineering. Currently, I work as a <strong>research assistant</strong> under
+                    Dr. Mark Warschauer on the Code-AI project,
+                    <strong>developing software to enhance AI literacy among students</strong>.
+                    Additionally, I am part of the CP-LEADS fellowship, a program that prepares
+                    students for Ph.D. programs while offering valuable research experience and
+                    tools.
+                </p>
+                <p>In my role as a research assistant, <strong>I lead the development of back-end
+                    programs</strong> for a project hosted on AWS, collaborating with Ph.D.
+                    candidate Daniel Ritchie. Together, our team focuses on creating innovative
+                    software to provide students with new ways to learn programming and AI, offering
+                    me real-world experience in collaborative coding.
+                </p>
+                <p>As a CP-LEADS fellow, I conduct research within a faculty member's lab, leading
+                    to independent projects. The fellowship provides personalized mentorship and
+                    technical skills, <strong>aligning with my goal of pursuing a Ph.D. after
+                        graduation.</strong>
+                </p>
+                <p>In my spare time, I enjoy developing websites, apps, games, and desktop
+                    applications. Beyond coding, I find pleasure in video games, outdoor running,
+                    and occasional streaming sessions with friends. These hobbies not only enrich my
+                    personal life but also contribute to a well-rounded skill set that complements
+                    my professional endeavors.
+                </p>
+            </div>
         </div>
     </div>
-</div>
+</main>
 
 <footer>
     <p>&copy; Last Updated December 2023 by Gerardo Lopez Jr.</p>
 </footer>
 
-
-
-<script>
-    function toggleNavbar() {
-        var navbar = document.getElementById("navbar");
-        navbar.classList.toggle("responsive");
-    }
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

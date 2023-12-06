@@ -1,7 +1,42 @@
 body {
-    margin: 0;
     font-family: 'Nunito', sans-serif;
-    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Make the main content area flexible to fill the remaining space */
+}
+
+.icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: transform 0.25s ease;
+}
+
+#line1 {
+    top: 0;
+}
+
+#line2 {
+    top: 13px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Added a delay of 0.25s to opacity */
+}
+
+#line3 {
+    bottom: 0;
 }
 
 #navbar {
@@ -29,7 +64,7 @@ body {
 #navbar #brand {
     float: none;
     text-align: center;
-    padding-top: 38px;
+    padding-top: 30px;
     display: block;
     margin: 0;
 }
@@ -37,6 +72,12 @@ body {
 #brand {
     color: black;
     font-size: 30px;
+}
+
+#divide-top {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #e5e5e5;
 }
 
 #navbar #brand:hover {
@@ -74,7 +115,7 @@ body {
 }
 
 .right-cont {
-    width: 550px; /* Set a fixed width for the right column */
+    width: 580px; /* Set a fixed width for the right column */
     box-sizing: border-box;
     /* border: 2px solid #333; */
     text-align: left;
@@ -84,8 +125,8 @@ body {
 }
 
 .small-light-grey-line {
-    border-top: 2px solid #ddd;
-    margin: 0 auto;
+    margin: 10px;
+    border: 1px solid #dcdbdb;
 }
 
 img {
@@ -101,13 +142,22 @@ img {
     text-align: center;
 }
 
+.linked-title {
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .project-object {
     text-align: center;
     margin: 20px;
+    text-indent: 0;
 }
 
 .project-object p {
     margin: 5px;
+    /* border: 2px solid #333; */
 }
 
 
@@ -116,9 +166,85 @@ img {
 }
 
 footer {
-    padding: 75px; /* Add padding to the footer content */
+    padding: 40px; /* Add padding to the footer content */
     text-align: center; /* Center-align the content within the footer */
 }
+
+.exp-title {
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-direction: column; /* Stack items vertically within the container */
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    text-indent: 0;
+    margin-bottom: 10px;
+}
+
+.exp-title h2,
+.exp-title p {
+    margin: 0;
+    padding: 0;
+}
+
+.experience {
+    margin-bottom: 50px;
+}
+
+.exp-listing p {
+    margin: 3px;
+    text-indent: 0;
+    padding-left: 30px;
+}
+
+.edu-title {
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-direction: column; /* Stack items vertically within the container */
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    text-indent: 0;
+    margin-bottom: 5px;
+}
+
+.edu-title h3,
+.edu-title p {
+    margin: 0;
+    padding: 0;
+}
+
+.edu-listing p {
+    margin: 0;
+    padding: 0;
+    text-indent: 10px;
+}
+
+.pub-listing {
+    text-indent: -20px;
+    padding-left: 25px;
+    /* border: 2px solid #333; */
+}
+
+#exp-label,
+#pub-label {
+    margin-top: 50px;
+}
+
+.prog-langs {
+    text-indent: 40px;
+}
+
+.prog-langs i {
+    font-size: 42px;
+}
+
+.prog-langs i:hover {
+    color: #1c7430;
+}
+
+
+
 
 @media screen and (max-width: 780px) {
     #navbar a:not(:first-child) {
@@ -126,30 +252,22 @@ footer {
     }
 
     #navbar #brand {
-        float: left;
-        text-align: left;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     #navbar a.icon {
         float: right;
         display: block;
-    }
-
-    #navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    #navbar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+        margin-top: 30px;
+        margin-right: 20px;
+        padding: 0;
     }
 
     #navbar.responsive a:not(.icon) {
         display: block;
-        text-align: left;
+        text-align: center;
+
     }
 
     .left-cont,
@@ -158,6 +276,8 @@ footer {
         box-sizing: border-box;
         /* border: 2px solid #333; */
         margin-bottom: 10px; /* Add some space between the columns */
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     #content-holder {
@@ -170,6 +290,10 @@ footer {
 
     img {
         max-width: 70%;
+    }
+
+    #selfie {
+        width: 300px;
     }
 }
 

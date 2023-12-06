@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Task Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description"
+          content="Personal website for Computer Science student Gerardo Lopez Jr."/>
+    <title>Gerardo Lopez Jr</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
           rel="stylesheet">
@@ -11,80 +16,82 @@
 <body>
 
 <div id="navbar">
-    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        &#9776;
+    <a class="icon" onclick="toggleNavbar()">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
     </a>
-    <a id="brand" href="">Gerardo Lopez Jr</a>
+    <p id="brand" href="">Gerardo Lopez Jr</p>
     <a href="./" class="silent">HOME</a>
     <a href="./projects" class="silent" style="color: black">PROJECTS</a>
     <a href="./experience" class="silent">EXPERIENCE</a>
     <a href="./tech_skills" class="silent">TECHNICAL SKILLS</a>
     <a href="./" class="silent">CV</a>
 </div>
-<hr class="small-light-grey-line">
-<div id="content-border">
-    <div id="content-holder">
-        <div class="left-cont">
-            <img src="profile_pic.png" alt="Gerardo Selfie">
-            <p><strong>Gerardo Lopez Jr.</strong></p>
-            <p><em>Bachelors Mathematics</em></p>
-            <p><em>Minor in Computer Scicience</em></p>
-            <p><em>University of California, Irvine</em></p>
-            <p class="silent">gjlopez2@uci.edu</p>
-        </div>
-        <div class="right-cont">
-            <h1 class="title">Projects</h1>
-            <hr class="small-light-grey-line">
 
-            <div class="project-object">
-                <img src="pic5.png" alt="Gerardo Selfie">
-                <h2>Mortgage Tracker</h2>
-                <p>Dynamic website to keep track of payments for mortgage</p>
-                <p>Database stored using MongoDB Atlas with API</p>
-                <p>Secured by encrypted login/pass</p>
-                <p>Calculates monthly intrest and logs data</p>
+<hr id="divide-top" class="small-light-grey-line">
+
+<main>
+    <div id="content-border">
+        <div id="content-holder">
+            <div class="left-cont">
+                <img id="selfie" src="./images/profile_pic.png" alt="Gerardo Selfie">
+                <p><strong>Gerardo Lopez Jr.</strong></p>
+                <p><em>Bachelors Mathematics</em></p>
+                <p><em>Minor in Computer Scicience</em></p>
+                <p><em>University of California, Irvine</em></p>
+                <p class="silent">gjlopez2@uci.edu</p>
             </div>
+            <div class="right-cont">
+                <h1 class="title">Projects</h1>
+                <hr class="small-light-grey-line">
 
-            <hr class="small-light-grey-line">
+                <div class="project-object">
+                    <img src="./images/proj_mort.png" alt="Gerardo Selfie">
+                    <h2>Mortgage Tracker</h2>
+                    <p>Dynamic website to calculate payments for mortgage</p>
+                    <p>Database stored using MongoDB Atlas with API</p>
+                    <p>Secured by encrypted login/pass</p>
+                    <p>Hosted using Google Cloud Platform</p>
+                </div>
 
-            <div class="project-object">
-                <img src="pic4.png" alt="Gerardo Selfie">
-                <h2>Code AI Website</h2>
-                <p>Static website made with Weebly</p>
-                <p>Embedded content to display previous work</p>
-                <p>Collaborated with Code-AI team for Creation</p>
-            </div>
+                <hr class="small-light-grey-line">
 
-            <hr class="small-light-grey-line">
+                <div class="project-object">
+                    <img src="./images/proj_code_ai.png" alt="Gerardo Selfie">
+                    <a href="https://www.code-ai.org/" class="linked-title">Code AI Website</a>
+                    <p>Static website made with Weebly</p>
+                    <p>Embedded content to display previous work</p>
+                    <p>Collaborated with Code-AI team for Creation</p>
+                </div>
 
-            <div class="project-object">
-                <img src="pic2.png" alt="Gerardo Selfie">
-                <h2>Wonderful Citrus Assistance</h2>
-                <p>Dynamic website created using Python</p>
-                <p>Made to help factory workers calculate their loads faster</p>
-                <p>Daily users since June 2022</p>
-            </div>
+                <hr class="small-light-grey-line">
 
-            <hr class="small-light-grey-line">
+                <div class="project-object">
+                    <img src="./images/proj_wonderful.png" alt="Gerardo Selfie">
+                    <h2>Wonderful Citrus Assistance</h2>
+                    <p>Dynamic website created using Python</p>
+                    <p>Made to help factory workers calculate their loads faster</p>
+                    <p>Daily users from June 2022 to January 2024</p>
+                </div>
 
-            <div class="project-object">
-                <img src="pic6.png" alt="Gerardo Selfie">
-                <h2>This Website :)</h2>
-                <p>Static website made with HTML, CSS, and JavaScript</p>
-                <p>Hosted by Github</p>
+                <hr class="small-light-grey-line">
+
+                <div class="project-object">
+                    <img src="./images/proj_web.png" alt="Gerardo Selfie">
+                    <h2>This Website :)</h2>
+                    <p>Static website made with HTML, CSS, and JavaScript</p>
+                    <p>Hosted by Github</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<hr class="small-light-grey-line">
+</main>
+
 <footer>
     <p>&copy; Last Updated December 2023 by Gerardo Lopez Jr.</p>
 </footer>
-<script>
-    function toggleNavbar() {
-        var navbar = document.getElementById("navbar");
-        navbar.classList.toggle("responsive");
-    }
-</script>
+
+<script src="script.js"></script>
 </body>
 </html>
