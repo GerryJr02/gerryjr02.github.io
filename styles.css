@@ -21,9 +21,9 @@ main {
 .line {
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: #333;
-    transition: transform 0.25s ease;
+    transition: transform 0.4s ease;
 }
 
 #line1 {
@@ -32,11 +32,11 @@ main {
 
 #line2 {
     top: 13px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Added a delay of 0.25s to opacity */
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 #line3 {
-    bottom: 0;
+    bottom: 1px;
 }
 
 #navbar {
@@ -54,6 +54,11 @@ main {
 
 #navbar a:hover {
     color: black;
+    transition: color .6s ease;
+}
+
+#navbar a:not(:hover) {
+    transition: color .6s ease;
 }
 
 #navbar .icon {
@@ -251,6 +256,10 @@ footer {
         display: none;
     }
 
+    #navbar #navbar-options {
+        display: none;
+    }
+
     #navbar #brand {
         text-align: center;
         margin-bottom: 10px;
@@ -264,11 +273,16 @@ footer {
         padding: 0;
     }
 
+    #navbar.responsive #navbar-options:not(.icon),
     #navbar.responsive a:not(.icon) {
         display: block;
         text-align: center;
-
+        background: white;
     }
+
+     #navbar.responsive #navbar-options:not(.icon) {
+         width: 100%;
+     }
 
     .left-cont,
     .right-cont {
