@@ -184,6 +184,7 @@ footer {
     justify-content: space-between;
     text-indent: 0;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .exp-title h2,
@@ -238,6 +239,7 @@ footer {
 
 .prog-langs {
     text-indent: 40px;
+    text-align: center;
 }
 
 .prog-langs i {
